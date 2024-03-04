@@ -1,0 +1,105 @@
+<4/3/24=11:05>
+1.what is React?
+=>Page won't be refreshed but the content changes, so we use react.
+
+=>The content change in react is faster than the angular so everyone uses react.
+
+=> A JS library for user interfaces.
+
+E.g: Facebook - dia1.jpg
+
+2.Using React in html:
+
+=> we can write a react app directly in html.
+
+=>Import cdn react link in the header.
+Eg: ex1.html;
+
+2.why react?
+=>React is a component based architecture.
+    =>Multiple component forms a webpage.
+    =>Component makes the code reusable.
+
+=>React is declarative.
+    =>Tell React what you want and react will build the actual UI.
+     
+    =>When the content changes, it only updates what is necessary.
+
+NPX vs NPM:
+==========
+
+=>NPX is a npm package runner.
+    ->This works without installing create-react-app but directly runs it.
+
+=>We can use similarly use npm to do it.
+    ->npm install create-react-app -g
+    ->create-react-app<proj_name>
+
+    ->But here we have to constantly update the create-react-app package.
+
+Folder Structure:
+=================
+
+ Parent
+ |-->Node Modules Dir
+ |-->Public Dir
+ |-->src Dir
+ |-->.gitignore
+ |-->package-lock.json
+ |-->package.json
+ |-->README.md
+
+ Package.json:
+ ->Contains dependencies and scripts of the project.
+
+ Package-lock.json:
+ ->It contains the installation of the dependencies with its url.
+
+ node_modules(dir):
+ ->It is were all the dependencies are installed.
+
+ index.html:
+  ->It contains the root div where the dev should code for the page.
+
+Vite:
+====
+url: https://www.youtube.com/watch?v=89NJdbYTgJ8&ab_channel=TraversyMedia
+->Supports hot module replacement - Instant changes updated - state perserved.
+->In the network tab, the source code is like the module (separately). In create-react-app, the modules are combined as bundle and embedded in index.js.
+
+->Typescript is 20-30% percent faster in vite because it skips type skipping.
+
+->NPM run build is used to rollup to bundle files for production.
+
+vite vs Traditional modular bundler(webpack):
+============================================
+
+=>All the modules are bundled using webpack as a single bundle.js. So upon every change the bundle file will be reconstructed which is late.(webapp);
+
+=>Vite uses es6 modules where <script type="modules">. It is a dev server not a modular bundler.
+
+=>when it is time for production, it uses rollup which is a modular bundler(npm run build);
+
+vite vs create React App:
+========================
+
+->Alternative to CRA;
+
+How traditional bundling work? : dia2
+
+SET-UP VITE:
+============
+->npm init vite <appName>
+
+Environment variable:
+====================
+
+=>Go to root, create .env file:
+like variable1=hello;
+
+=>Go to target place, use :
+{import.meta.env.variable1}//hello
+
+=>we can use npm run build ->for building the production bundle.
+
+=> Use npm run preview -> for running production preview.

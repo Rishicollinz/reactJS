@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First app</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="root2"></div>
+    <script>
+        function hello() {
+            return <h2>Hello World!</h2>
+        }
+        function second() {
+            return <h3>This is start</h3>
+        }
+        const { createRoot } = ReactDOM;
+        const root = createRoot(document.getElementsById('root'));
+        const second = createRoot(document.getElementsById('root2'));
+        root.render(<hello />);
+        second.render(<second />);
+    </script>
+</body>
+
+</html>
