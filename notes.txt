@@ -103,3 +103,36 @@ like variable1=hello;
 =>we can use npm run build ->for building the production bundle.
 
 => Use npm run preview -> for running production preview.
+
+Components:
+===========
+
+->React applications are built from isolated pieces of UI called components. A React component is a JavaScript function that you can sprinkle with markup. Components can be as small as a button, or as large as an entire page.
+
+->The magic of component lies in their usability.
+->So split the component as much as possible.
+
+Root component:
+===============
+
+->App.jsx is the root component(starting component)
+
+->The top-level element that is the parent of all other components in your application.
+
+Writing markup with JSX:
+========================
+
+=>Each component is a js function that may contain some markup that react renders into the browser.
+->React components use a syntax extension called jsx to represent that markup.
+->Jsx is stricter than html. like all tags should be closed.class=>className and so on.
+
+Rules of jsx:
+1.Return a single root element:
+like <> ... </>
+
+why? 
+    ->Jsx looks like html, but under the hood it is transformed into plain js objects. You can't return two objects from a function without wrapping them into an array.
+
+2.Close all the tags:
+3.camelCase most of the things.
+
