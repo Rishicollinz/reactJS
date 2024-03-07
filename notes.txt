@@ -124,7 +124,7 @@ Writing markup with JSX:
 
 =>Each component is a js function that may contain some markup that react renders into the browser.
 ->React components use a syntax extension called jsx to represent that markup.
-->Jsx is stricter than html. like all tags should be closed.class=>className and so on.
+->Jsx is stricter than html. like all tags should be closed.class=>className, for=>htmlFor and so on(camelCase);
 
 Rules of jsx:
 1.Return a single root element:
@@ -135,4 +135,64 @@ why?
 
 2.Close all the tags:
 3.camelCase most of the things.
+
+JS in jsx with curly braces:
+============================
+
+->use js inside jsx within {...};
+
+Rules:
+->we can only use js as text or attribute value like src={title} not as a jsx tag(<{tag}>);
+
+->JSX ultimately transpiles to js
+
+Props:
+=====
+
+->Props/properties is an optional input that our component can accept. It also allows the component to be dynamic.
+
+1.Pass a data into component.
+2.Component process the data/manipulate.
+3.return different result dynamically.
+
+Example:
+1.Enter a name into component, display the result in the browser.
+refer:ex5->App.jsx
+
+Process:
+1. send the data as attribute inside the tag in the imported or destination place.
+ex:<Greet name="Aslam" job="dev"></Greet>
+
+2.Get the data in the source inside the function as parameter(here the data is in a object(any number of attributes will be encapsulated inside this object)).
+
+Ex:
+export function Greet(props){
+    return(
+        <>
+            <h2> {"Hello "+props.name+", Job:"+props.job}</h2>
+        </>
+    );
+}
+
+Props.children:
+=================
+->In the destination(imported place), Inbetween the tags, any data(element) can be accessed inside the source.
+export function Greet(props){
+    return(
+        <>
+            <h2> {"Hello "+props.name+", Job:"+props.job}</h2>
+            <h2>{props.children}</h2>
+        </>
+    );
+}
+
+Props with class components:
+============================
+
+->Instead of using props as function parameter, in class it implemented as this.props.*;
+
+*.Props are immutable
+=======================
+
+
 
